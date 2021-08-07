@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "210307-202724-nodemcuv2",
+			"path": "..\\..\\Documents\\PlatformIO\\Projects\\210307-202724-nodemcuv2"
+		}
+	],
+	"settings": {
+		"files.defaultLanguage": "c"
+	}
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Refresh" content="5">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MeiShang Web Server Test System</title>
+  <style>
+    /* -------------------------按钮控制代码---------------------------------------------------------------- */
+    h2,
+    h1 {
+      line-height: 1%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 340px;
+      background: LightCyan
+    }
+
+    .button {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-weight: 100;
+      color: darkcyan;
+      margin: 0 40px 40px 0;
+      position: relative;
+      border: 6px solid darkcyan;
+      background: LightCyan;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    .top1 {
+      width: 360px;
+      height: 45px;
+      color: #FFF;
+      border: 1px solid darkcyan;
+      background: darkcyan;
+      font-size: 25px;
+      border-radius: 0%;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="./pin?light1=1"><button class="button top1">&#x6E29;&#x6E7F;&#x5EA6;&#x663E;&#x793A;</button></a>
+  <center style="left: 20px; position: relative;"> </br> <!--          主页               -->
+    <a href="./pin?light1=1"><button type="button" class="button" value="temp">温度<span
+          style="color: red;  font-size: 25px;">
+          00°C</span></button></a>
+    <a href="./pin?light1=0"><button type="button" class="button" value="humi">湿度<span
+          style="color: green;font-size: 25px;">
+          00%</span></button></a></br>
+  </center>
+</body>
+
+</html>

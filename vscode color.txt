@@ -1,0 +1,87 @@
+    "workbench.colorCustomizations": {
+        
+    "breadcrumb.foreground": "#ff0000" ,  //面包屑普通文字颜色
+    "breadcrumb.background": "#324432" ,  //面包屑导航背景色
+    "breadcrumb.activeSelectionForeground": "#ff0000",  //点击面包屑导航一段字后可见字变成此颜色并弹出菜单
+// "breadcrumb.focusForeground":  "" ,//面包屑上的一段字按住不放可见此颜色
+// "breadcrumbPicker.background":""  , //点击面包屑导航一段字后弹出菜单的背景色
+
+        "contrastBorder": "#ff0000", //围绕元素的额外边界，将它们与其他元素分开，形成更大的对比度。
+        "window.activeBorder": "#ff0000", //活动（聚焦）窗口的边框颜色。
+        "window.inactiveBorder": "#ff0000", //非活动（未聚焦）窗口的边框颜色。
+        "editor.background": "#424040", //背景颜色 代码看得清楚
+        "statusBar.border": "#616461",//资源管理器与编辑框边界线颜色
+        "activityBar.background": "#5c5757", //右侧图标栏背景颜色
+        "sideBar.background": "#4e4747a9", //插件扩展区背景颜色
+        "activityBar.foreground": "#ff0303", //侧边图标变红
+        "sideBar.foreground": "#f0eae9e0", // 资源管理器栏稍微背景颜色
+        "sideBar.border": "#fcf805",
+        // Scrollbar
+        "scrollbarSlider.background": "#eef77d", //侧滚动条更明显
+        "scrollbarSlider.hoverBackground": "#a00f0f",
+        "scrollbarSlider.activeBackground": "#ff0000",
+        "scrollbar.shadow": "#ff0000", //下拉菜单颜色
+        "gitDecoration.modifiedResourceForeground": "#00600f",
+        "dropdown.background": "#3f423f",
+        "dropdown.border": "#c5e1a5",
+        "titleBar.activeBackground": "#c4e2c4", //菜单栏背景颜色
+        "titleBar.activeForeground": "#519657",
+        "titleBar.inactiveBackground": "#464b46",
+        "titleBar.inactiveForeground": "#62e96e",
+        "titleBar.border": "#ff0000", //标题栏边框颜色
+        "contrastActiveBorder": "#ff0000", //选文件的时候加个红边框 选的更准
+        "editor.wordHighlightBackground": "#063ef7", //修改选择相同代码后的颜色
+        "editor.selectionHighlightBackground": "#676a6d", //所选内容区域颜色
+        "editor.selectionBackground": "#fa0606", //选中高亮
+        "editorOverviewRuler.addedForeground": "#25f809e7",
+        "editorOverviewRuler.modifiedForeground": "#f5070700",
+        "editorOverviewRuler.deletedForeground": "#e41a1a00",
+        // Gutter (same as tweaking scm.diffDecorations?)
+        "editorGutter.addedBackground": "#f36d6d00",
+        "editorGutter.modifiedBackground": "#0cf74700",
+        "editorGutter.deletedBackground": "#20f50c00",
+        
+        // "editor.background": "#0000", //背景颜色
+        "editorLineNumber.foreground": "#ddc8c8", // 标尺
+        "editorRuler.foreground": "#3f3f3f", // 快捷提示窗口
+        "editorSuggestWidget.highlightForeground": "#f0f7efa2",
+        "editorSuggestWidget.selectedBackground": "#333f5c",
+       // "editor.renderLineHighlight": "all", // 当前行对应的行号栏也高亮显示
+        // "editor.selectionHighlightBorder": "#90e97259",
+        // terminal 中的光标
+        "terminalCursor.foreground": "#bbc0bab9",
+        // 侧边栏中一块区域的标题
+        "sideBarSectionHeader.background": "#32363d",
+        // 区域获取焦点时
+        "focusBorder": "#5b99fc36",
+        "peekView.border": "#5b99fc9c", // peek 窗口
+        // 侧边栏资源管理器列表
+        "list.inactiveSelectionBackground": "#32363d",
+        "list.inactiveSelectionForeground": "#dfdfdf",
+        "list.hoverBackground": "#767975", //鼠标移动到项目文件上的背景颜色
+        "list.hoverForeground": "#f8096d", //鼠标移动到项目文件上文字颜色
+        // 顶部 tab 栏
+        "tab.border": "#5ef324",
+        "tab.activeBackground": "#8d8b8f", //当前选项卡背景颜色 
+        "tab.activeForeground": "#fa3503", //当前选项卡背景颜色
+        "tab.activeBorder": "#5b99fcb9",
+        "tab.hoverBackground": "#312f2f",
+        "tab.hoverBorder": "#5b99fcb9",
+        "tab.inactiveForeground": "#f3b373",//选项卡文字颜色
+        "editor.fontSize": 16, // 字号
+        "editor.fontFamily": "Consolas, 'Courier New', monospace,宋体", // 字体
+   
+    },
+    // 隐藏最左侧的工具栏
+    // "workbench.activityBar.visible": false,
+
+    "editor.tokenColorCustomizations": {
+        
+            "comments": "#3ef047", //注释
+            "keywords": "#92e8f3", // 关键字
+            "variables": "#fc09ab", // 变量名
+            "strings": "#f7620bfd", // 字符串
+            "functions": "#e7b615c9", // 函数名
+            "numbers": "#f30b64", // 数字
+            "types": "#f183e2", //代表着类型的颜色； 
+    },

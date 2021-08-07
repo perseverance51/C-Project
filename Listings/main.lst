@@ -1,0 +1,53 @@
+C51 COMPILER V9.59.0.0   MAIN                                                              03/22/2021 22:05:11 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #define  uchar unsigned char
+   3          #define  uint unsigned int
+   4            
+   5          sbit led = P0 ^ 0;
+   6          uchar Cout = 0;
+   7          
+   8          void main()
+   9          {
+  10   1           TMOD = 0X00;    //0000 0000 定时器0，工作方式0
+  11   1            EA=1;
+  12   1          TH0 = (8192 - 5000) / 32; //5ms定时
+  13   1          TL0 = (8192 - 5000) % 32;
+  14   1          IE = 0X82; //1111 1101 T0中断允许位
+  15   1          TR0 = 1;   //启动定时器
+  16   1          while (1);
+  17   1      
+  18   1          }
+  19          void led_flash() interrupt 1 //T0中断号为1
+  20          {
+  21   1          TH0 = (8192 - 5000) / 32; //恢复初值
+  22   1          TL0 = (8192 - 5000) % 32;
+  23   1          if (++Cout == 100) //0.5秒开关一次，0.5S =5ms*100
+  24   1          {
+  25   2              led = !led; //取反
+  26   2              Cout = 0;   //恢复初始值
+  27   2          }
+  28   1      }
+  29          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     41    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+    content='width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes' />
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>esp8266的GPIO引脚状态翻转控制</title>
+  <link rel='stylesheet' href='http://at.alicdn.com/t/font_1640699_nk29qyrqhco.css'>
+  <style>
+    h2,
+    h1 {
+      line-height: 1%;
+    }
+
+    body {
+      width: 360px;
+      margin: 0;
+      padding: 0;
+      background: LightCyan;
+    }
+
+    .button {
+      width: 130px;
+      height: 70px;
+      text-align: center;
+      color: #FFF;
+      border-radius: 1px;
+      margin: 40px -4.5px 0px 0;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgb(2, 69, 253);
+      background: darkcyan;
+      font-size: 14px;
+      outline: none;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    .top1 {
+      width: 360px;
+      height: 45px;
+      color: rgb(53, 136, 5);
+      border: 2px;
+      background: rgb(233, 235, 236);
+      font-size: 20px;
+      left: -15px;
+      position: relative;
+      top: 2px;
+    }
+
+    .device1 {
+      left: 60px;
+      position: relative;
+      font-size: 20px;
+
+    }
+  </style>
+</head>
+
+<body><button class='top1'>esp8266的GPIO引脚状态翻转控制</button></a>
+  <dl>
+    <center><span style='left: -16px; position: relative;' id='time1'> Time Loading ......</span>
+      <script>
+        setInterval('time1.innerHTML=new Date().toLocaleString()', 1000);
+      </script>
+
+    </center>
+    <div class='device1'> 设备在线时间：<a></a>
+    </div>
+    <center style=' left: -20px; position: relative;'>
+      <a href='./m?x1=1'><button type='button' class='button'>
+          <div class='m x-deng2' style='font-size:40px; color: "+a+";'></div>&#x5BA2; &#x5385;
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键1 -->
+      <a href='./m?x1=2'><button type='button' class='button'>
+          <div class='m x-deng' style='font-size:40px; color: "+b+";'></div>&#x9910; &#x5385;
+        </button></a></br>
+      <!-- 按键2 -->
+      <a href='./m?x1=3'><button type='button' class='button'>
+          <div class='m x-woshi' style='font-size:40px; color: "+c+";'></div>卧室
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键3 -->
+      <a href='./m?x1=4'><button type='button' class='button'>
+          <div class='m x-chufang' style='font-size:40px; color: "+d+";'></div>厨房
+        </button></a></br>
+      <!-- 按键4 -->
+      <a href='./m?x1=5'><button type='button' class='button'>
+          <div class='m x-chuanglian' style='font-size:40px; color: "+e+";'></div>窗帘
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键5 -->
+      <a href='./m?x1=6'><button type='button' class='button'>
+          <div class='m x-dushu' style='font-size:40px; color: "+f+";'></div>书房
+        </button></a></br>
+      <!-- 按键6 -->
+      <a href='./m?x1=7'><button type='button' class='button'>
+          <div class='m x-kongtiao' style='font-size:40px; color: "+g+";'></div>空调
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键7 -->
+      <a href='./m?x1=8'><button type='button' class='button'>
+          <div class='m x-reshuiqi' style='font-size:40px; color: "+h+";'></div>热水器
+        </button></a></br>
+      <!-- 按键8 全控-->
+      <a href='./m?x1=9'><button type='button' class='button'>
+          <div class='m x-shuimian' style='font-size:40px;'></div>总开关
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键9 -->
+      <a href='./m?x1=0'><button type='button' class='button'>
+          <div class='m x-kongtiao' style='font-size:40px;'></div>重启ESP8266
+        </button></a></br>
+    </center>
+    </ul>
+    <br>
+
+
+</body>
+
+</html>

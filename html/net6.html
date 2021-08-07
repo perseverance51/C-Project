@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+    content='width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no' />
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>MeiShang Smarthome Control System</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1640699_nk29qyrqhco.css">
+  <style>
+    /* --------------------------选项卡代码------------------------- */
+    .tabs {
+      width: 360px;
+      margin: 0px auto;
+      /* 选项卡背景 */
+      background-color: LightCyan;
+      border: 0px solid #FFF;
+      box-sizing: border-box;
+    }
+
+    .tabs nav {
+      height: 55px;
+      text-align: center;
+      line-height: 30px;
+      overflow: hidden;
+      background-color: DarkCyan;
+      /* 选项卡 */
+      display: flex;
+      margin: -0.5px auto;
+    }
+
+    nav a {
+      display: block;
+      /* 选项卡 */
+      width: 51.4px;
+      border-right: 0px solid #fff;
+      font-size: 12px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    nav a.active {
+      background-color: DarkTurquoise;
+    }
+
+    .cont {
+      overflow: hidden;
+      display: none;
+    }
+
+    .cont ol {
+      line-height: 20px;
+    }
+
+    /* -------------------------按钮控制代码---------------------------------------------------------------- */
+    h2,
+    h1 {
+      line-height: 1%;
+    }
+
+    body {
+      width: 360px;
+      margin: 0;
+      padding: 0;
+      background: LightCyan;
+    }
+
+    .button {
+      width: 130px;
+      height: 70px;
+      text-align: center;
+      color: #FFF;
+      border-radius: 1px;
+      margin: 40px -4.5px 0px 0;
+      position: relative;
+      overflow: hidden;
+      border: 0px solid #FFF;
+      background: darkcyan;
+      font-size: 12px;
+      outline: none;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    .top1 {
+      width: 360px;
+      height: 45px;
+      color: white;
+      border: 0px;
+      background: darkcyan;
+      font-size: 25px;
+      left: -40px;
+      position: relative;
+      top: -16px;
+    }
+
+    .button1 {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-weight: 100;
+      color: darkcyan;
+      margin: 0 40px 35px 0;
+      position: relative;
+      border: 6px solid darkcyan;
+      background: LightCyan;
+      font-size: 12px;
+      border-radius: 50%;
+      outline: none;
+    }
+
+    .button2 {
+      text-align: center;
+      color: darkcyan;
+      margin: 0 auto;
+      float: right;
+      border: 0px solid darkcyan;
+      background: LightCyan;
+      font-size: 20px;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='tabs'>
+    <section class='cont' id='Page1' style='display:block'>
+      <ol><br />
+        <center><span style='left: -20px; position: relative;' id='time1'> Time Loading ......</span>
+          <script>
+            setInterval('time1.innerHTML=new Date().toLocaleString()', 1000);
+          </script>
+        </center>
+
+        <center></br> <!--          总控 0              -->
+          <a href='./pin?light0=1'><button type='button' class='button1'>
+              <div class="m x-icon-test" style="font-size: 35px;"></div>&#x8D77; &#x5E8A;
+            </button></a>
+          <a href='./pin?light0=2'><button type='button' class='button1'>
+              <div class="m x-chifan" style="font-size: 35px;"></div>&#x7528; &#x9910;
+            </button></a>
+          <a href='./pin?light0=3'><button type='button' class='button1'>
+              <div class="m x-huiyi" style="font-size: 35px;"></div>&#x4F1A; &#x5BA2;
+            </button></a>
+          <a href='./pin?light0=4'><button type='button' class='button1'>
+              <div class="m x-shuimian" style="font-size: 35px;"></div>&#x7761; &#x7720;
+            </button></a>
+          <a href='./pin?light0=5'><button type='button' class='button1'>
+              <div class="m x-yuangongchelianglika" style="font-size: 35px;"></div>&#x79BB; &#x5BB6;
+            </button></a>
+          <a href='./pin?light0=6'><button type='button' class='button1'>
+              <div class="m x-yuangongcheliangjinr" style="font-size: 35px;"></div>&#x56DE; &#x5BB6;
+            </button></a>
+          </br>
+        </center>
+      </ol>
+    </section>
+    <section class='cont' id='Page2'>
+      <!--          客厅1              -->
+      <ol>
+        <button class='top1'>&#x5BA2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x5385;</button></a><br />
+        <center style='left: -20px; position: relative;'>
+          <a href='./pin?light1=1'><button type='button' class='button '>
+              <div class="m x-deng2" style="font-size:40px;"></div>&#x5BA2; &#x5385;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light1=2'><button type='button' class='button '>
+              <div class="m x-deng" style="font-size:40px;"></div>&#x9910; &#x5385;
+            </button></a>
+          </br>
+          <a href='./pin?light1=3'><button type='button' class='button '>
+              <div class="m x-chuanglian" style="font-size:40px;"></div>&#x7A97; &#x5E18;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light1=4'><button type='button' class='button '>
+              <div class="m x-kongtiao" style="font-size:40px;"></div>&#x7A7A; &#x8C03;
+            </button></a>
+          </br>
+        </center>
+      </ol>
+    </section>
+    <section class='cont' id='Page3'>
+      <!--          卧室2              -->
+      <ol>
+        <button class='top1'>&#x5367; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x5BA4;</button></a>
+        <center style='left: -20px; position: relative;'>
+          <a href='./pin?light2=1'><button type='button' class='button '>
+              <div class="m x-deng2" style="font-size:40px;"></div>&#x7167; &#x660E;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light2=2'><button type='button' class='button '>
+              <div class="m x-deng1" style="font-size:40px;"></div>&#x591C; &#x706F;
+            </button></a>
+          </br>
+          <a href='./pin?light2=3'><button type='button' class='button '>
+              <div class="m x-chuanglian" style="font-size:40px;"></div>&#x7A97; &#x5E18;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light2=4'><button type='button' class='button '>
+              <div class="m x-kongtiao" style="font-size:40px;"></div>&#x7A7A; &#x8C03;
+            </button></a>
+          </br>
+        </center>
+      </ol>
+    </section>
+    <section class='cont' id='Page4'>
+      <!--          书房3              -->
+      <ol>
+        <button class='top1'>&#x4E66; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x623F;</button></a>
+        <center style='left: -20px; position: relative;'>
+          <a href='./pin?light3=1'><button type='button' class='button '>
+              <div class="m x-deng2" style="font-size:40px;"></div>&#x7167; &#x660E;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light3=2'><button type='button' class='button '>
+              <div class="m x-deng1" style="font-size:40px;"></div>&#x591C; &#x706F;
+            </button></a>
+          </br>
+          <a href='./pin?light3=3'><button type='button' class='button '>
+              <div class="m x-chuanglian" style="font-size:40px;"></div>&#x7A97; &#x5E18;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light3=4'><button type='button' class='button '>
+              <div class="m x-kongtiao" style="font-size:40px;"></div>&#x7A7A; &#x8C03;
+            </button></a>
+          </br>
+        </center>
+      </ol>
+    </section>
+    <section class='cont' id='Page5'>
+      <!--          厨房4              -->
+      <ol>
+        <button class='top1'>&#x53A8; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x623F;</button></a>
+        <center style='left: -20px; position: relative;'>
+          <a href='./pin?light4=1'><button type='button' class='button '>
+              <div class="m x-deng2" style="font-size:40px;"></div>&#x7167; &#x660E;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light4=2'><button type='button' class='button '>
+              <div class="m x-tubiao-youyanji" style="font-size:40px;"></div>&#x6CB9;&#x70DF;&#x673A;
+            </button></a>
+          </br>
+          <a href='./pin?light4=3'><button type='button' class='button '>
+              <div class="m x-reshuiqi" style="font-size:40px;"></div>&#x70ED;&#x6C34;&#x5668;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light4=4'><button type='button' class='button '>
+              <div class="m x-dianfanbao" style="font-size:40px;"></div>&#x7535;&#x996D;&#x7172;
+            </button></a>
+          </br>
+        </center>
+      </ol>
+    </section>
+    <section class='cont' id='Page6'>
+      <!--          阳台5              -->
+      <ol>
+        <button class='top1'>&#x9633; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x53F0;</button></a>
+        <center style='left: -20px; position: relative;'>
+          <a href='./pin?light5=1'><button type='button' class='button '>
+              <div class="m x-deng2" style="font-size:40px;"></div>&#x7167; &#x660E;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light5=2'><button type='button' class='button '>
+              <div class="m x-xiyiji" style="font-size:40px;"></div>&#x6D17;&#x8863;&#x673A;
+            </button></a>
+          </br>
+
+        </center>
+      </ol>
+    </section>
+    <section class='cont' id='Page7'>
+      <!--          浴室6              -->
+      <ol>
+        <button class='top1'>&#x6D74; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x5BA4;</button></a>
+        <center style='left: -20px; position: relative;'>
+          <a href='./pin?light6=1'><button type='button' class='button '>
+              <div class="m x-deng2" style="font-size:40px;"></div>&#x7167; &#x660E;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light6=2'><button type='button' class='button '>
+              <div class="m x-huandengpao" style="font-size:40px;"></div>&#x955C;&#x524D;&#x706F;
+            </button></a>
+          </br>
+          <a href='./pin?light6=3'><button type='button' class='button '>
+              <div class="m x-hekriconshebeiyuba" style="font-size:40px;"></div>&#x53D6; &#x6696;
+            </button></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href='./pin?light6=4'><button type='button' class='button '>
+              <div class="m x-fengshan" style="font-size:40px;"></div>&#x6362; &#x6C14;
+            </button></a>
+          </br>
+
+        </center>
+      </ol>
+    </section>
+    <!-- ------------------------------底部选项卡---------------->
+    <nav style='bottom:1px; position:absolute;'>
+      <a href='javascript:;' data-cont='Page1' class='active'>
+        <div class="m x-M" style="font-size:35px;"></div><span>&#x4E3B; &#x9875;</span>
+      </a>
+      <a href='#' data-cont='Page2'>
+        <div class="m x-keting1" style="font-size:35px;"></div><span>&#x5BA2; &#x5385;</span>
+      </a>
+      <a href='javascript:;' data-cont='Page3'>
+        <div class="m x-woshi" style="font-size:35px;"></div><span>&#x5367; &#x5BA4;</span>
+      </a>
+      <a href='javascript:;' data-cont='Page4'>
+        <div class="m x-dushu" style="font-size:35px;"></div><span>&#x4E66; &#x623F;</span>
+      </a>
+      <a href='javascript:;' data-cont='Page5'>
+        <div class="m x-canju" style="font-size:35px;"></div><span>&#x53A8; &#x623F;</span>
+      </a>
+      <a href='javascript:;' data-cont='Page6'>
+        <div class="m x-yangtai1" style="font-size:35px;"></div><span>&#x9633; &#x53F0;</span>
+      </a>
+      <a href='javascript:;' data-cont='Page7'>
+        <div class="m x-yushi" style="font-size:35px;"></div><span>&#x6D74; &#x5BA4;</span>
+      </a>
+
+    </nav>
+  </div>
+  <!-- ------------------------------开启自动打开总控---------------->
+  <script>
+    var aArr = document.querySelectorAll('a');
+    for (var i = 0; i < aArr.length; i++) {
+      aArr[i].οnclick = function () {
+        var active = document.querySelector('.active');
+        active.classList.remove('active');
+        this.classList.add('active');
+        var name = this.getAttribute('data-cont');
+        var section = document.getElementById(name);
+        var cont = document.getElementsByClassName('cont');
+        for (var i = 0; i < cont.length; i++) {
+          cont[i].style.display = 'none';
+        }
+        section.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+
+</html>

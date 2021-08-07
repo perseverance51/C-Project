@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+    content='width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes' />
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>esp8266气象时钟-功能控制页面</title>
+  <link rel='stylesheet' href='http://at.alicdn.com/t/font_1640699_nk29qyrqhco.css'>
+  <style>
+    ul {
+      /* 在同一行显示 */
+      display: inline;
+      list-style-type: none;
+      margin: 80px 0px 35px 0px;
+      /*margin:100px auto无效,不能使ul左右居中*/
+      text-align: center;
+      font-size: 16px;
+
+      text-decoration: none;
+    }
+
+    li {
+      display: inline;
+      display: inline-block;
+
+      width: 100px;
+      padding: 10px;
+      background-color: #ff9137;
+
+    }
+
+    li a {
+
+      font-family: Arial, 'Microsoft YaHei';
+      /* Arial，微软雅黑 */
+      text-decoration: none;
+      display: block;
+      /*整体变为可点击区域，而不只是字*/
+    }
+
+    .top1 {
+      width: 360px;
+      height: 45px;
+      color: rgb(53, 136, 5);
+      border: 2px;
+      background: rgb(233, 235, 236);
+      font-family: Arial, '宋体';
+      font-style: 700;
+      font-size: 20px;
+      left: -15px;
+      position: relative;
+      top: 2px;
+    }
+
+    .button {
+      width: 130px;
+      height: 70px;
+      /* padding-left: 5px; */
+
+      text-align: center;
+      color: #FFF;
+      border-radius: 1px;
+      margin: 40px -4.5px 0px 20px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgb(2, 69, 253);
+      background: darkcyan;
+      font-size: 14px;
+      outline: none;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    body {
+      width: 360px;
+      margin: 0;
+      padding: 0;
+      background: LightCyan;
+    }
+
+    nav a {
+      display: inline;
+      /* 选项卡 让链接横排 */
+      margin-left: 20px;
+      margin-bottom: 2;
+
+      width: 128px;
+      border: 2px solid rgb(3, 59, 245);
+      text-align: center;
+      font-size: 24px;
+      font: 700;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #fc0758;
+      text-decoration: none;
+    }
+
+    nav a.active {
+      background-color: DarkTurquoise;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class='tabs'>
+    <center>
+      <a href='/'><button class='top1' type='button'><strong>
+            功能控制页面
+          </strong></button></a>
+      <span style='left: -16px; position: relative;' id='time1'> Time Loading ......</span>
+      <script>
+        setInterval('time1.innerHTML=new Date().toLocaleString()', 1000);
+      </script>
+
+    </center>
+
+    <!-- 按键1 3天气象-->
+    <a href='./m?x1=10'><button type='button' class='button'>
+        <div class='m x-keting1' style='font-size:40px; color: "+g+";'></div>3天气象
+      </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- 按键2 实时天气 -->
+    <a href='./m?x1=11'><button type='button' class='button'>
+        <div class='m x-woshi' style='font-size:40px; color:"+h+";'></div>实时天气
+      </button></a></br>
+    <!-- 按键3 农历-->
+    <a href='./m?x1=12'><button type='button' class='button'>
+        <div class='m x-chuanglian' style='font-size:40px; color: "+x+";'></div>农历
+      </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- 按键4 NTP时间-->
+    <a href='./m?x1=13'><button type='button' class='button'>
+        <div class='m x-chufang' style='font-size:40px; color: "+y+";'></div>NTP时间
+      </button></a></br>
+    </ul><br>
+
+    <div class='tabs'>
+      <ul>
+        <li><a href='/'><span>&#x4E3B; &#x9875;</span></a></li>
+        <li><a href='./m?x1=0'><span>&#x529F;&#x80FD;&#x63A7;&#x5236;&#x9875;&#x9762;</span></a></li>
+      </ul>
+    </div>
+    <!-- <nav style='bottom: 5px; position:absolute;'>
+      <a href='/' class='active'><span>&#x4E3B; &#x9875;</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href='./m?x1=0' class='active'><span>功能控制页面</span> </a>
+
+    </nav> -->
+
+
+</body>
+
+</html>

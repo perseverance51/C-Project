@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+    content='width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes' />
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>esp8266气象时钟控制主页</title>
+  <link rel='stylesheet' href='http://at.alicdn.com/t/font_1640699_nk29qyrqhco.css'>
+  <style>
+    ul {
+      /* 在同一行显示 */
+      display: inline;
+      list-style-type: none;
+      margin: 80px 0px 35px 0px;
+      /*margin:100px auto无效,不能使ul左右居中*/
+      text-align: center;
+      font-size: 16px;
+
+      text-decoration: none;
+    }
+
+    li {
+      display: inline;
+      display: inline-block;
+
+      width: 100px;
+      padding: 10px;
+      background-color: #ff9137;
+
+    }
+
+    li a {
+
+      font-family: Arial, 'Microsoft YaHei';
+      /* Arial，微软雅黑 */
+      text-decoration: none;
+      display: block;
+      /*整体变为可点击区域，而不只是字*/
+    }
+
+    body {
+      width: 360px;
+      margin: 0;
+      padding: 0;
+      background: LightCyan;
+    }
+
+    .button {
+      width: 130px;
+      height: 70px;
+      text-align: center;
+      color: #FFF;
+      border-radius: 1px;
+      margin: 20px -4.5px 0px 0;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgb(2, 69, 253);
+      background: darkcyan;
+      font-size: 14px;
+      outline: none;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    .top1 {
+      width: 360px;
+      height: 45px;
+      color: rgb(53, 136, 5);
+      border: 2px;
+      background: rgb(233, 235, 236);
+      font-family: Arial, 'SimHei';
+      font-style: 700;
+      font-size: 20px;
+      left: -15px;
+      position: relative;
+      top: 2px;
+    }
+
+    .device1 {
+      left: 61px;
+      position: relative;
+      font-size: 20px;
+      font-family: 'Microsoft yahei';
+      font-style: 700;
+
+    }
+
+    .nav {
+      left: -15px;
+
+    }
+
+
+    nav a {
+      display: inline;
+      /* 选项卡 让链接横排 */
+      margin-left: 36px;
+      border-right: 0px solid #fff;
+      width: 128px;
+      border: 2px solid rgb(3, 59, 245);
+      text-align: center;
+      font-size: 24px;
+      font: 700;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #fc0758;
+      text-decoration: none;
+    }
+
+    nav a.active {
+      background-color: DarkTurquoise;
+    }
+  </style>
+</head>
+
+<body><a href='/'><button class='top1' type='button'><strong>
+        esp8266气象时钟控制主页
+      </strong></button></a>
+  <dl>
+    <center><span style='left: -16px; position: relative;' id='time1'> Time Loading ......</span>
+      <script>
+        setInterval('time1.innerHTML=new Date().toLocaleString()', 1000);
+      </script>
+
+    </center>
+    <div class='device1'>
+      <font style='font-family:SimHei'>&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x65F6;&#x95F4;:<a> </a></font>
+    </div>
+    <center style=' left: -15px; position: relative;'>
+      <!-- 按键1 客厅-->
+      <a href='./m?x1=1'><button type='button' class='button'>
+          <div class='m x-keting1' style='font-size:40px; color: "+a+";'></div>&#x5BA2; &#x5385;
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键2 卧室 -->
+      <a href='./m?x1=2'><button type='button' class='button'>
+          <div class='m x-woshi' style='font-size:40px; color:"+b+";'></div>&#x5367;&#x5BA4;
+        </button></a></br>
+      <!-- 按键3 窗帘-->
+      <a href='./m?x1=3'><button type='button' class='button'>
+          <div class='m x-chuanglian' style='font-size:40px; color: "+c+";'></div>&#x7A97;&#x5E18;
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键4 厨房-->
+      <a href='./m?x1=4'><button type='button' class='button'>
+          <div class='m x-chufang' style='font-size:40px; color: "+d+";'></div>&#x53A8;&#x623F;
+        </button></a></br>
+      <!-- 按键5 热水器-->
+      <a href='./m?x1=5'><button type='button' class='button'>
+          <div class='m x-reshuiqi' style='font-size:40px; color: "+e+";'></div>&#x70ED;&#x6C34;&#x5668;
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键6 OLED屏幕-->
+      <a href='./m?x1=6'><button type='button' class='button'>
+          <div class='m x-deng1' style='font-size:40px; color: "+f+";'></div>OLED&#x5C4F;&#x5E55;
+        </button></a></br>
+      <!-- 按键7 全控-->
+      <a href='./m?x1=7'><button type='button' class='button'>
+          <div class='m x-huandengpao' style='font-size:40px;'></div>&#x603B;&#x5F00;&#x5173;
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键8 重启ESP8266-->
+      <a href='./m?x1=8'><button type='button' class='button'>
+          <div class='m x-kongtiao' style='font-size:40px;'></div>&#x91CD;&#x542F;ESP8266
+        </button></a>
+      <!-- 按键10 3天气象-->
+      <a href='./m?x1=10'><button type='button' class='button'>
+          <div class='m x-M' style='font-size:40px; color: "+e+";'></div>3天气象
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键11 实时天气-->
+      <a href='./m?x1=11'><button type='button' class='button'>
+          <div class='m x-fengshan' style='font-size:40px; color: "+f+";'></div>实时天气
+        </button></a></br>
+      <!-- 按键12 农历-->
+      <a href='./m?x1=12'><button type='button' class='button'>
+          <div class='m x-shuimian' style='font-size:40px;'></div>农历
+        </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- 按键13 NTP时间-->
+      <a href='./m?x1=13'><button type='button' class='button'>
+          <div class='m x-icon-test' style='font-size:40px;'></div>NTP时间
+        </button></a>
+
+    </center>
+    </ul><br>
+
+
+
+</body>
+
+</html>

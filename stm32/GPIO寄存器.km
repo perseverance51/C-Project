@@ -1,0 +1,776 @@
+{
+    "root": {
+        "data": {
+            "id": "ca56ozgvakw0",
+            "created": 1616548714897,
+            "text": "每组GPIO端口寄存器",
+            "note": "每组IO口包含7个寄存器，，一共可以控制一组GPIO的16个IO口。"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ca56qp31zdk0",
+                    "created": 1616548849023,
+                    "text": "2个32位配置寄存器",
+                    "expandState": "expand",
+                    "layout_bottom_offset": {
+                        "x": 739.7499894388019,
+                        "y": 66.49999891966579
+                    },
+                    "background": "#00b050",
+                    "note": "CRH和CRL作用：一样，区别在于CRH控制的是标号8-15的口，CRL控制的是标号0-7的口"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ca56t2073u80",
+                            "created": 1616549033876,
+                            "text": "GPIOx_CRL",
+                            "layout_bottom_offset": {
+                                "x": 565.999992400408,
+                                "y": 34.749998528510446
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ca56wcm89w00",
+                                    "created": 1616549292069,
+                                    "text": "端口配置低寄存器",
+                                    "layout_bottom_offset": {
+                                        "x": 65.25000355765215,
+                                        "y": 38.99999910593044
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ca572t3cqg00",
+                                            "created": 1616549798118,
+                                            "text": "占用4bit",
+                                            "layout_bottom_offset": {
+                                                "x": 0,
+                                                "y": 11
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ca573epo52g0",
+                                                    "created": 1616549845180,
+                                                    "text": "2bit配置MODE(输入输出模式以及速度)",
+                                                    "layout_bottom_offset": {
+                                                        "x": 158.74999763444083,
+                                                        "y": 41.249999385327044
+                                                    }
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca576is2gl40",
+                                                            "created": 1616550089124,
+                                                            "text": "00",
+                                                            "layout_bottom_offset": {
+                                                                "x": 65,
+                                                                "y": 8
+                                                            },
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca578kf7o9s0",
+                                                                    "created": 1616550249429,
+                                                                    "text": "输入模式(复位后的状态)"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ca576mblr4o0",
+                                                            "created": 1616550096836,
+                                                            "text": "01",
+                                                            "layout_bottom_offset": {
+                                                                "x": 34,
+                                                                "y": 2
+                                                            }
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca578ldl66w0",
+                                                                    "created": 1616550251507,
+                                                                    "text": "输出模式，最大速度10MHz",
+                                                                    "layout_bottom_offset": {
+                                                                        "x": -2,
+                                                                        "y": 1
+                                                                    }
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ca576ohjevk0",
+                                                            "created": 1616550101548,
+                                                            "text": "10"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca578mfb0yo0",
+                                                                    "created": 1616550253788,
+                                                                    "text": "输出模式，最大速度2MHz"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ca576pt61i80",
+                                                            "created": 1616550104428,
+                                                            "text": "11"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca578ndp8zc0",
+                                                                    "created": 1616550255868,
+                                                                    "text": "输出模式，最大速度50MHz"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ca57f91a0mg0",
+                                                    "created": 1616550773191,
+                                                    "text": "2bit配置CNF(输入/输出模式下的具体方式)",
+                                                    "layout_bottom_offset": {
+                                                        "x": -416.2499970756472,
+                                                        "y": 28.999999627470856
+                                                    }
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca573id7grk0",
+                                                            "created": 1616549853133,
+                                                            "text": "2bit配置CNF(输出模式下的具体方式)",
+                                                            "layout_bottom_offset": {
+                                                                "x": 233.4999969825148,
+                                                                "y": 126.999998509884
+                                                            }
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca577jf0tts0",
+                                                                    "created": 1616550168876,
+                                                                    "text": "00"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca578o9q7a80",
+                                                                            "created": 1616550257804,
+                                                                            "text": "通用推挽输出模式"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca577kyyg6g0",
+                                                                    "created": 1616550172259,
+                                                                    "text": "01"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca578p14fm00",
+                                                                            "created": 1616550259461,
+                                                                            "text": "通用开漏输出模式"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca577m4slvk0",
+                                                                    "created": 1616550174788,
+                                                                    "text": "10"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca578pz8vzk0",
+                                                                            "created": 1616550261524,
+                                                                            "text": "服用功能推挽输出模式"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca577nris8o0",
+                                                                    "created": 1616550178339,
+                                                                    "text": "11"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca578qw2db40",
+                                                                            "created": 1616550263509,
+                                                                            "text": "复用功能开漏输出模式"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ca57fntckfc0",
+                                                            "created": 1616550805363,
+                                                            "text": "2bit配置CNF(输入模式下的具体方式)",
+                                                            "layout_bottom_offset": {
+                                                                "x": 190.24999759718776,
+                                                                "y": 128.49999847263086
+                                                            }
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca57h6an8z40",
+                                                                    "created": 1616550923955,
+                                                                    "text": "00"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca57i8dgg880",
+                                                                            "created": 1616551006844,
+                                                                            "text": "模拟输入模式"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca57h7xwybk0",
+                                                                    "created": 1616550927539,
+                                                                    "text": "01"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca57i9eni5s0",
+                                                                            "created": 1616551009092,
+                                                                            "text": "浮空输入模式(复位后的状态)"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca57h92shfs0",
+                                                                    "created": 1616550930011,
+                                                                    "text": "10"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca57iaawvd40",
+                                                                            "created": 1616551011043,
+                                                                            "text": "上拉/下拉输入模式"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca57ha5fleo0",
+                                                                    "created": 1616550932347,
+                                                                    "text": "11",
+                                                                    "layout_bottom_offset": {
+                                                                        "x": 18.749999720603228,
+                                                                        "y": 6.249999906867856
+                                                                    }
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ca57ib4t9800",
+                                                                            "created": 1616551012852,
+                                                                            "text": "未定义保留位"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ca56t4wku2w0",
+                            "created": 1616549040188,
+                            "text": "GPIOx_CRH",
+                            "layout_bottom_offset": {
+                                "x": -552.7499922700229,
+                                "y": 30.24999856576352
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ca56wdl08fk0",
+                                    "created": 1616549294172,
+                                    "text": "端口配置高寄存器"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ca56qt2pz4w0",
+                    "created": 1616548857710,
+                    "text": "2个32位数据寄存器",
+                    "layout_bottom_offset": {
+                        "x": -627.7499959953127,
+                        "y": 10.00000029802311
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ca56t6m3eao0",
+                            "created": 1616549043908,
+                            "text": "GPIOx_IDR",
+                            "layout_bottom_offset": {
+                                "x": -211,
+                                "y": 14
+                            },
+                            "note": "IDR寄存器低16位，每个位控制该组IO的一个IO口。对应的是IO口的输入电平"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ca56weexkio0",
+                                    "created": 1616549295981,
+                                    "text": "端口输入数据寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ca584p9ck4g0",
+                                            "created": 1616552767611,
+                                            "text": "低16位",
+                                            "note": "16-31保留"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ca5863qy03k0",
+                                                    "created": 1616552877515,
+                                                    "text": "IDR0-IDR16"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58aqfyv6o0",
+                                                            "created": 1616553240373,
+                                                            "text": "0"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca58c4awaa80",
+                                                                    "created": 1616553348906,
+                                                                    "text": "下拉输入",
+                                                                    "layout_bottom_offset": {
+                                                                        "x": 0,
+                                                                        "y": -11
+                                                                    }
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58asr09z40",
+                                                            "created": 1616553245395,
+                                                            "text": "1"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca58byaclpc0",
+                                                                    "created": 1616553335812,
+                                                                    "text": "上拉输入",
+                                                                    "layout_bottom_offset": {
+                                                                        "x": -1,
+                                                                        "y": -9
+                                                                    }
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ca56t843ja00",
+                            "created": 1616549047173,
+                            "text": "GPIOx_ODR",
+                            "layout_bottom_offset": {
+                                "x": -210,
+                                "y": 28
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ca56wfa036g0",
+                                    "created": 1616549297860,
+                                    "text": "端口输出数据寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ca58543697k0",
+                                            "created": 1616552799890,
+                                            "text": "低16位",
+                                            "layout_bottom_offset": {
+                                                "x": 1,
+                                                "y": -10
+                                            },
+                                            "note": "16-31保留"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ca586e8sv080",
+                                                    "created": 1616552900362,
+                                                    "text": "ODR0-ODR16"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58cs7xme80",
+                                                            "created": 1616553400970,
+                                                            "text": "0"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca58d1z2l9s0",
+                                                                    "created": 1616553422202,
+                                                                    "text": "输出低电平"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58ctp4v2o0",
+                                                            "created": 1616553404186,
+                                                            "text": "1"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ca58d2t4bfc0",
+                                                                    "created": 1616553424018,
+                                                                    "text": "输出高电平"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ca56qw2t9ag0",
+                    "created": 1616548864245,
+                    "text": "1个32位置位/复位寄存器",
+                    "layout_bottom_offset": {
+                        "x": -1894.9998961905658,
+                        "y": 62.749999199062586
+                    },
+                    "note": " \nBSRR寄存器低16位，对应位设置为1，那么IO口输出为高电平，对应位设置0，对应IO口不产生任何影响，高16位作用相反。"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ca56t9vhbmw0",
+                            "created": 1616549051005,
+                            "text": "GPIOx_BSRR",
+                            "note": "BSRR寄存器低16位，对应位设置为1，那么IO口输出为高电平，对应位设置0，对应IO口不产生任何影响，高16位作用相反。"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ca56wgft54g0",
+                                    "created": 1616549300388,
+                                    "text": "端口位设置/清除寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ca58kc743i80",
+                                            "created": 1616553993005,
+                                            "text": "BS0-BS15",
+                                            "layout_bottom_offset": {
+                                                "x": -69.99999895691872,
+                                                "y": 3.7499999441205887
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ca58lbpxh3c0",
+                                                    "created": 1616554070330,
+                                                    "text": "0"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58lplmpww0",
+                                                            "created": 1616554100545,
+                                                            "text": "对应的ODR位不产生影响"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ca58lctrz480",
+                                                    "created": 1616554072739,
+                                                    "text": "1"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58m623wyo0",
+                                                            "created": 1616554136370,
+                                                            "text": "对应的ODR位为1"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "ca58kzr55vk0",
+                                            "created": 1616554044282,
+                                            "text": "BR0-BR15",
+                                            "layout_bottom_offset": {
+                                                "x": -109.99999836087227,
+                                                "y": 11.249999832361993
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ca58ljv8o9c0",
+                                                    "created": 1616554088066,
+                                                    "text": "0"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58mj6pfi80",
+                                                            "created": 1616554164946,
+                                                            "text": "对应的ODR位不产生影响"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ca58lkxgq3s0",
+                                                    "created": 1616554090377,
+                                                    "text": "1"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58mk3e21c0",
+                                                            "created": 1616554166922,
+                                                            "text": "清楚对应的ODR位为0"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ca56r0amjq80",
+                    "created": 1616548873425,
+                    "text": "1个16位复位寄存器",
+                    "layout_bottom_offset": {
+                        "x": -1020.2499841861427,
+                        "y": 68.74999897554517
+                    },
+                    "note": "只用0-16位"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ca56tb0v7yw0",
+                            "created": 1616549053508,
+                            "text": "GPIOx_BRR"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ca56wi1devc0",
+                                    "created": 1616549303868,
+                                    "text": "端口位清除寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ca58qdncxdc0",
+                                            "created": 1616554466349,
+                                            "text": "BR0-BR15"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ca58qlvod9k0",
+                                                    "created": 1616554484266,
+                                                    "text": "0",
+                                                    "layout_bottom_offset": {
+                                                        "x": -7.499999888241348,
+                                                        "y": 0
+                                                    }
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58qsbw20w0",
+                                                            "created": 1616554498307,
+                                                            "text": "对应的ODR位不产生影响"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ca58qmwpbm80",
+                                                    "created": 1616554486505,
+                                                    "text": "1"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ca58rbc4wsg0",
+                                                            "created": 1616554539681,
+                                                            "text": "清除对应ODR位位0"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ca56r5e2low0",
+                    "created": 1616548884517,
+                    "text": "1个32位锁定寄存器",
+                    "layout_bottom_offset": {
+                        "x": -1062.4999836459756,
+                        "y": 69.99999895691866
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ca56tc66eqg0",
+                            "created": 1616549056006,
+                            "text": "GPIOx_LCKR"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ca56wiugork0",
+                                    "created": 1616549305627,
+                                    "text": "端口配置所存寄存器"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "structure",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
